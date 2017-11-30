@@ -1,0 +1,12 @@
+{
+  "name": "chitchat",
+  "version": "0.0.1",
+  "description": "Multiroom Chat App",
+  "dependencies": {
+    "express": "^4.15.2",
+    "socket.io": "^1.7.3"
+  },
+  "scripts": {
+    "start": "node app.js"
+  }
+}
