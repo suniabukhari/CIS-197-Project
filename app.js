@@ -1,4 +1,3 @@
-
 var http = require('http')
 var express = require('express');
 var app = express();
@@ -84,7 +83,7 @@ io.sockets.on('connection', function (socket) {
 		io.sockets.in(socket.room).emit('updatechat', socket.username, data);
 	});
 	socket.on('sendimage', function () {
-		socket.emit('sendimage', socket.username);
+		io.sockets.in(socket.room).emit('sendimage', socket.username);
 	});
 		socket.on('switchRoom', function(newroom){
 		console.log('switchroom/app.js');
