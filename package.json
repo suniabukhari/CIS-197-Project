@@ -3,10 +3,26 @@
   "version": "0.0.1",
   "description": "Multiroom Chat App",
   "dependencies": {
+    "bcrypt": "^1.0.3",
+    "body-parser": "^1.18.2",
+    "cookie-session": "^2.0.0-beta.3",
+    "ejs": "^2.5.7",
+    "eslint": "^4.13.1",
     "express": "^4.15.2",
+    "gulp": "^3.9.1",
+    "mongodb": "^3.0.0-rc0",
+    "mongoose": "^4.13.6",
+    "s3": "^4.4.0",
     "socket.io": "^1.7.3"
   },
   "scripts": {
     "start": "node app.js"
+  },
+  "devDependencies": {
+    "eslint-config-standard": "^11.0.0-beta.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1"
   }
 }
