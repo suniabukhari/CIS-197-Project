@@ -68,7 +68,6 @@ io.sockets.on('connection', function (socket) {
 		// echo to client they've connected
 		// echo to room 1 that a person has connected to their room
 	socket.on('startchat', function(){	
-		console.log('startchat/app.js');
 		socket.username = username;
 		socket.room = 'general';
 		socket.join('general');
@@ -79,14 +78,12 @@ io.sockets.on('connection', function (socket) {
 	// when the client emits 'sendchat', this listens and executes
 	// we tell the client to execute 'updatechat' with 2 parameters
 	socket.on('sendchat', function (data) {
-		console.log('sendchat/app.js');
 		io.sockets.in(socket.room).emit('updatechat', socket.username, data);
 	});
 	socket.on('sendimage', function () {
 		io.sockets.in(socket.room).emit('sendimage', socket.username);
 	});
 		socket.on('switchRoom', function(newroom){
-		console.log('switchroom/app.js');
 		socket.leave(socket.room);
 		socket.join(newroom);
 		socket.emit('updatechatroom',newroom);
